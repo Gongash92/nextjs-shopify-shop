@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Readex+Pro:wght@300;400;600&display=swap");
+.option-Color .px-2 {
+  color: transparent;
+  font-size: 0;
+  padding: 10px;
+  display: flex;
+}
+
+.option-Size .rounded-full {
+  padding: 20px;
+  border-radius: 10px !important;
+  width: 64px;
+  height: 64px;
+  background-color: #ffff;
+}
+
+.child:nth-child(n + 5) {
+  order: 2;
+}
+.child:nth-child(1) {
+  order: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Marcellus", serif;
+}
+
+p,
+li,
+a {
+  font-family: "Readex Pro", sans-serif !important;
+}
+
+.sans {
+  font-family: "Readex Pro", sans-serif !important;
+}
+
+.serif {
+  font-family: "Marcellus", serif;
+}
+.aas {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+body {
+  background-color: #eee7d7;
+  background-image: url("../public/bg.webp");
+}
+
+.bg-dark-krem {
+  background-color: #2A0E0A;
+}
+
+.fixed-content {
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.fade-anim img {
+  animation: fadeAnim 0.3s ease-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .margin-project button:nth-child(1) {
+    margin-left: -20px;
+  }
+
+  .margin-project button:nth-child(2) {
+    margin-right: -20px;
+  }
+}
+
+.testo {
+  animation: fadeAnim 0.3s ease-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+		transform:translateY(-30px)
+  }
+  to {
+    opacity: 1;
+		transform:translateY(0px)
+
+  }
+}
+
+.slika {
+	margin-left: -80px;
+	margin-top: 10px;
+}
+
+.slikaa {
+	margin-right: -57px;
+	margin-bottom: -96px;
+}
