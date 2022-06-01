@@ -11,11 +11,11 @@ export default function ShopProvider({ children }) {
   const [checkoutId, setCheckoutId] = useState("");
   const [checkoutUrl, setCheckoutUrl] = useState("");
 
-  // Check if cart is 0 or above to set cart object id and webUrl
+  // save cart object on refresh page
   useEffect(() => {
     if (localStorage.checkout_id) {
       const cartObject = JSON.parse(localStorage.checkout_id);
-
+    // check cart item and set item 'cart persist'
       if (cartObject[0].id) {
         setCart([cartObject[0]]);
       } else if (cartObject[0].length > 0) {
