@@ -43,8 +43,9 @@ export default function ProductForm({ product }) {
     defaultValues[item.name] = item.values[0];
   });
 
-	//select product variants size color of product
+	//state for all variants
   const [selectedVariant, setSelectedVariant] = useState(allVariantOptions[0]);
+	//state for default values 
   const [selectedOptions, setSelectedOptions] = useState(defaultValues);
 
   function setOptions(name, value) {
