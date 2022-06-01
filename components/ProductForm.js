@@ -43,7 +43,7 @@ export default function ProductForm({ product }) {
     defaultValues[item.name] = item.values[0];
   });
 
-	//state for all variants
+	//state for all variants of product
   const [selectedVariant, setSelectedVariant] = useState(allVariantOptions[0]);
 	//state for default values 
   const [selectedOptions, setSelectedOptions] = useState(defaultValues);
