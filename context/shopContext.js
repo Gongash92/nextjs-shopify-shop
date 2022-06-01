@@ -11,7 +11,7 @@ export default function ShopProvider({ children }) {
   const [checkoutId, setCheckoutId] = useState("");
   const [checkoutUrl, setCheckoutUrl] = useState("");
 
-  // save cart object on refresh page
+  // save cart object on refresh page, trigers only on mount
   useEffect(() => {
     if (localStorage.checkout_id) {
       const cartObject = JSON.parse(localStorage.checkout_id);
