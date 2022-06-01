@@ -43,7 +43,7 @@ export default function ShopProvider({ children }) {
       setCheckoutId(checkout.id);
       setCheckoutUrl(checkout.webUrl);
 
-      // If item exists in localstorage add value to exist
+      // set value to localstorage
       localStorage.setItem("checkout_id", JSON.stringify([newItem, checkout]));
     } else {
       let newCart = [];
@@ -53,6 +53,7 @@ export default function ShopProvider({ children }) {
       cart.map((item) => {
         if (item.id === newItem.id) {
           item.variantQuantity++;
+          // creating new cart object using existing cart 
           newCart = [...cart];
           added = true;
         }
@@ -62,9 +63,9 @@ export default function ShopProvider({ children }) {
         newCart = [...cart, newItem];
       }
 
-      // add to localstorage
       setCart(newCart);
       const newCheckout = await updateCheckout(checkoutId, newCart);
+      // set a localstorage
       localStorage.setItem(
         "checkout_id",
         JSON.stringify([newCart, newCheckout])
