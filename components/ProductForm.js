@@ -12,6 +12,8 @@ function classNames(...classes) {
 
 export default function ProductForm({ product }) {
 
+	console.log("product: ", product)
+
 	// define funciton add to cart
   const { addToCart } = useContext(CartContext);
 
